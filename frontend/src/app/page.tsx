@@ -1,3 +1,5 @@
+import VocabularyDashboard from "@/components/vocabulary-dashboard";
+
 export const dynamic = "force-dynamic";
 
 type BackendHealth = { status: string; database: string };
@@ -23,6 +25,7 @@ export default async function Home() {
         <h2 id="backend-status">Backend</h2>
         <p>{health ? `API: ${health.status} · Database: ${health.database}` : "Chưa kết nối được backend"}</p>
       </section>
+      <VocabularyDashboard />
     </main>
   );
 }

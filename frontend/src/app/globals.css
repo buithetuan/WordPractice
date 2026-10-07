@@ -1,5 +1,34 @@
 * { box-sizing: border-box; }
-body { margin: 0; background: #f6f7fb; color: #172033; font-family: Arial, sans-serif; }
-main { max-width: 760px; margin: 12vh auto; padding: 32px; }
-h1 { margin-bottom: 8px; }
-section { margin-top: 32px; padding: 20px; border: 1px solid #dce1eb; border-radius: 12px; background: white; }
+body { margin: 0; background: #f3f5fa; color: #172033; font-family: Arial, sans-serif; }
+main { max-width: 1240px; margin: 0 auto; padding: 36px 24px 80px; }
+h1 { margin: 0 0 8px; letter-spacing: -0.04em; font-size: 2.4rem; }
+main > p { color: #68738a; margin: 0; }
+main > section { margin: 24px 0; padding: 16px 20px; border: 1px solid #dce1eb; border-radius: 12px; background: white; }
+h2 { margin: 0 0 18px; font-size: 1.2rem; }
+h3 { margin: 0 0 12px; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; border: 0; border-radius: 8px; background: #3859d8; color: white; padding: 10px 14px; font-weight: 650; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+input, textarea, select { border: 1px solid #cfd5e2; border-radius: 7px; padding: 9px 10px; background: #fff; color: #172033; width: 100%; }
+label { display: grid; gap: 6px; color: #47536b; font-size: .9rem; }
+.workspace { margin-top: 24px; }
+.status-line { min-height: 22px; margin-bottom: 8px; }
+.error, .success { font-size: .9rem; }.error { color: #b42318; }.success { color: #167449; }
+.tabs { display: flex; gap: 8px; border-bottom: 1px solid #d8deea; margin: 12px 0 20px; }
+.tabs button { border-radius: 8px 8px 0 0; color: #58647b; background: transparent; border-bottom: 2px solid transparent; }
+.tabs button.active { color: #2f4fc4; border-color: #3859d8; background: #e8edff; }
+.columns { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.35fr); gap: 18px; align-items: start; }
+.panel { margin: 0; min-width: 0; padding: 22px; border: 1px solid #dce1eb; border-radius: 14px; background: white; box-shadow: 0 5px 20px #1c2d5010; }
+.form { display: grid; gap: 12px; }.form label textarea { resize: vertical; }
+.section-title { margin: 26px 0 12px; }
+.list { display: grid; gap: 6px; max-height: 420px; overflow: auto; }
+.list-row { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 12px; text-align: left; background: #fff; color: #172033; border: 1px solid #e2e6ee; padding: 11px 12px; font-weight: 400; }
+.list-row:hover, .list-row.selected { background: #f0f3ff; border-color: #9eaff9; }.list-row span, .list-row small { color: #778198; font-size: .8rem; }.list-row small { display: block; margin-top: 4px; }.muted { color: #7a8498; font-size: .9rem; }
+.detail-panel { min-height: 420px; }.detail-heading, .sense-heading { display: flex; justify-content: space-between; align-items: center; gap: 14px; }.detail-heading h2 { margin: 4px 0 0; font-size: 1.7rem; }.eyebrow { color: #67738d; font-size: .72rem; font-weight: 700; letter-spacing: .12em; }.secondary { background: #e9edfb; color: #314db5; }.danger { color: #a32222; background: #fff0f0; }.text-button { padding: 3px; background: transparent; color: #3859d8; font-size: .85rem; }
+.empty { padding: 36px 16px; color: #738097; }.sense { border-top: 1px solid #edf0f5; margin-top: 16px; padding-top: 16px; }.sense-heading { justify-content: flex-start; color: #35415a; font-size: .88rem; font-weight: 700; }.sense-heading span:nth-child(2) { color: #738097; }.sense p { line-height: 1.55; }.vietnamese { color: #305397; }.chip { display: inline-block; padding: 4px 8px; border-radius: 20px; background: #eef5ff; color: #40649e; font-size: .78rem; }
+blockquote { margin: 12px 0 0; padding: 8px 12px; border-left: 3px solid #c9d5ff; color: #49566f; background: #fafbff; }.sense small { display: block; margin-top: 5px; color: #71809c; }
+.pronunciation-form { display: grid; gap: 10px; margin-top: 26px; padding-top: 18px; border-top: 1px solid #e8ebf1; }.pronunciation-form h3 { margin: 0; }.form-grid { display: grid; grid-template-columns: 120px 1fr; gap: 8px; }.pronunciation-list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }.pronunciation-list li { display: flex; align-items: center; gap: 10px; }.pronunciation-list audio { height: 34px; }
+.suggestion-box { display: grid; gap: 12px; margin-top: 22px; padding: 16px; border: 1px solid #d8e0fa; border-radius: 10px; background: #f8f9ff; }.suggestion-choice { display: flex; align-items: flex-start; grid-template-columns: auto 1fr; gap: 10px; }.suggestion-choice input { width: auto; margin-top: 4px; }.suggestion-choice span span { display: block; margin-top: 5px; }.warning { margin: 0; color: #9a5b00; }.checks { display: flex; gap: 12px 20px; flex-wrap: wrap; }.checks label, .confirm-check { display: flex; align-items: center; gap: 7px; }.checks input, .confirm-check input { width: auto; }
+.upload-form { display: flex; align-items: center; gap: 12px; margin: 20px 0; }.upload-form input { max-width: 460px; }.import-panel { display: grid; gap: 8px; }.preview { display: grid; gap: 18px; margin-top: 18px; }.mapping-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }.mapping-grid label { font-size: .76rem; font-weight: 700; }.mapping-grid select { font-size: .82rem; font-weight: 400; }
+.table-scroll { overflow: auto; border: 1px solid #e1e5ee; border-radius: 8px; }table { width: 100%; border-collapse: collapse; font-size: .85rem; }th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #edf0f4; vertical-align: top; }th { background: #f7f8fb; color: #647089; font-size: .76rem; }td select { min-width: 120px; }.tag { display: inline-block; border-radius: 20px; padding: 3px 7px; background: #eaf7ef; color: #217348; font-size: .7rem; font-weight: 700; }.tag.ambiguous { background: #fff5dc; color: #946200; }.tag.invalid { background: #fff0ee; color: #a5372a; }.repair { display: block; margin-top: 4px; color: #906100; }.confirm-check { display: flex !important; }
+@media (max-width: 820px) { main { padding: 24px 14px 56px; }.columns { grid-template-columns: 1fr; }.detail-heading { align-items: flex-start; flex-direction: column; }.upload-form { align-items: stretch; flex-direction: column; }.tabs { overflow: auto; }.panel { padding: 17px; } }

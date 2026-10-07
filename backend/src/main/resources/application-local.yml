@@ -1,4 +1,16 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  ai-service:
+    url: ${AI_SERVICE_URL:http://localhost:8000}
+  audio:
+    storage-path: ${AUDIO_STORAGE_PATH:./var/audio}
+  lab:
+    user-id: ${LAB_USER_ID:00000000-0000-0000-0000-000000000001}
+    user-email: ${LAB_USER_EMAIL:lab-user@wordpractice.local}
+    admin: ${LAB_USER_ADMIN:false}
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:vocab_learning}?options=-c%20TimeZone=UTC
     username: ${POSTGRES_USER:postgres}
